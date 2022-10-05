@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>ArcGIS JavaScript Tutorials: Create a Starter App</title>
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+      header.esri-popup__header {
+        display: none !important;
+      }
+      .esri-popup__footer {
+        display: none !important;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.15/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.15/"></script>
+
+    <script>
+      var map;
+      require(["esri/Map", "esri/views/MapView"], function (Map, MapView) {
+        map = new Map({
+          basemap: "topo-vector",
+        });
+
+        var view = new MapView({
+          container: "viewDiv",
+          map: map,
+          center: [105.77355469793679, 10.051880585566632],
+          zoom: 18,
+        });
+
+        view.popup.autoOpenEnabled = false; // Disable the default popup behavior
+
+        view.on("click", function (event) {
+          navigator.clipboard.writeText(
+            `[${event.mapPoint.longitude}, ${event.mapPoint.latitude}],`
+          );
+          // Listen for the click event
+          view.hitTest(event).then(function (hitTestResults) {
+            // Search for features where the user clicked
+            if (hitTestResults.results) {
+              view.popup.open({
+                // open a popup to show some of the results
+                location: event.mapPoint,
+              });
+              console.log(`[${event.mapPoint.longitude}, ${event.mapPoint.latitude}],`);
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+</html>
