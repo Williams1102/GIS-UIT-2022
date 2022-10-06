@@ -2767,7 +2767,7 @@ const LA_ring = [
   ..._lineBienGioiNgoaiLongAn_TPHCM.reverse(),
   ..._lineBienGioiNgoaiLongAn_TayNinh.reverse(),
   ..._lineBienGioiNgoaiCampuchia,
-  ..._lineDT_LA,
+  ..._DTLineDT_LA,
   ..._lineLA_TG,
 ];
 require([
