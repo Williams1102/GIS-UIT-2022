@@ -17582,10 +17582,16 @@ https://developers.arcgis.com/documentation/mapping-apis-and-services/get-starte
       });
       const graphicsLayer = new GraphicsLayer();
       map.add(graphicsLayer);
+
       const popupTemplate = {
         title: "{Name}",
         content: "{Description}",
       };
+
+      const popupTemplate_point = {
+   title: "{Name}",
+   content: "{Description}"
+};
 
       [
         {
@@ -17688,7 +17694,578 @@ https://developers.arcgis.com/documentation/mapping-apis-and-services/get-starte
           popupTemplate: popupTemplate,
         });
         graphicsLayer.add(polylineGraphic);
+
+        //Cầu Mỹ Thuận
+ const point_Cau_MyThuan = { 
+   
+   type: "point",
+   longitude: 105.90993087309636,
+   latitude:  10.27817505192522
+};
+
+const Symbol_CauMT = {
+  type: "picture-marker",
+  url: "https://upload.wikimedia.org/wikipedia/commons/5/58/C%E1%BA%A7u_M%E1%BB%B9_Thu%E1%BA%ADn_%286297673871%29.jpg",
+  width: "24px",
+  height: "24px"
+};
+
+const attributes_Cau_MyThuan= {
+  Name: "Cầu Mỹ Thuận",
+  Description: "Tổng chiều dài 1.535,2 m"
+};
+
+const pointGraphic_Cau_MyThuan = new Graphic({
+   geometry: point_Cau_MyThuan,
+   symbol: Symbol_CauMT,
+   popupTemplate: popupTemplate_point,
+   attributes: attributes_Cau_MyThuan,
+});
+graphicsLayer.add(pointGraphic_Cau_MyThuan);
+
+
+//cầu Năm Căn
+const point_Cau_NamCan = { 
+  
+  type: "point",
+  longitude: 104.9685038926627, 
+  latitude:  8.735261952481174,
+};
+
+const Symbol_CauNC = {
+  type: "picture-marker",
+  url: "https://global-uploads.webflow.com/60af8c708c6f35480d067652/6266d6a0db23b559eed157f0_screenshot_1650906773.png",
+  width: "24px",
+  height: "24px"
+};
+
+const attributes_Cau_NamCan= {
+ Name: "Cầu Năm Căn",
+ Description: "Tổng chiều dài 3.390 m"
+};
+
+const pointGraphic_Cau_NamCan = new Graphic({
+  geometry: point_Cau_NamCan,
+  symbol: Symbol_CauNC,
+  popupTemplate: popupTemplate_point,
+  attributes: attributes_Cau_NamCan,
+});
+graphicsLayer.add(pointGraphic_Cau_NamCan);
+
+//cầu Mỹ Lợi
+const point_Cau_MyLoi = { 
+  
+  type: "point",
+  longitude: 106.63537771340636,
+  latitude:  10.46849443679542
+};
+
+const Symbol_CauML = {
+  type: "picture-marker",
+  url: "https://cdn1.tuoitre.vn/zoom/600_315/tto/i/s626/2015/08/26/phoi-canh-cau-my-loi-1440576363.jpg",
+  width: "24px",
+  height: "24px"
+};
+
+const attributes_Cau_MyLoi= {
+ Name: "Cầu Mỹ Lợi",
+ Description: "Tổng chiều dài 1.422 m"
+};
+
+const pointGraphic_Cau_MyLoi = new Graphic({
+  geometry: point_Cau_MyLoi,
+  symbol: Symbol_CauML,
+  popupTemplate: popupTemplate_point,
+  attributes: attributes_Cau_MyLoi,
+});
+graphicsLayer.add(pointGraphic_Cau_MyLoi);
+
+//cầu Cổ Chiên
+const point_Cau_CoChien = { 
+  
+  type: "point",
+  longitude: 106.30631970981834, 
+  latitude:  10.02888976918936
+};
+
+const Symbol_CauCC = {
+  type: "picture-marker",
+  url: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Co_Chien_bridge.jpg",
+  width: "24px",
+  height: "24px"
+};
+
+const attributes_Cau_CoChien= {
+ Name: "Cầu Cổ Chiên",
+ Description: "Tổng chiều dài 1.590 m"
+};
+
+const pointGraphic_Cau_CoChien = new Graphic({
+  geometry: point_Cau_CoChien,
+  symbol: Symbol_CauCC,
+  popupTemplate: popupTemplate_point,
+  attributes: attributes_Cau_CoChien,
+});
+graphicsLayer.add(pointGraphic_Cau_CoChien);
+
+
+//cầu Hàm Luông
+const point_Cau_HamLuong = { 
+  
+  type: "point",
+  longitude: 106.33366049114981, 
+  latitude:  10.234592989497674
+};
+
+const Symbol_CauHL = {
+  type: "picture-marker",
+  url: "https://live.staticflickr.com/289/20128032578_37d51d50e1_b.jpg",
+  width: "24px",
+  height: "24px"
+};
+
+const attributes_Cau_HamLuong= {
+ Name: "Cầu Hàm Luông",
+ Description: "Tổng chiều dài 1.227 m"
+};
+
+const pointGraphic_Cau_HamLuong = new Graphic({
+  geometry: point_Cau_HamLuong,
+  symbol: Symbol_CauHL,
+  popupTemplate: popupTemplate_point,
+  attributes: attributes_Cau_HamLuong,
+});
+graphicsLayer.add(pointGraphic_Cau_HamLuong);
+
+
+//cầu Cần Thơ
+const point_Cau_CanTho = { 
+  
+  type: "point",
+  longitude: 105.80939870835493,
+  latitude:   10.03231754422274 
+};
+
+const Symbol_CauCanTho = {
+  type: "picture-marker",
+  url: "https://scontent.iocvnpt.com/resources/portal/Images/CTO/superadminportal.cto/DiaDiem/CauCanTho/caucantho2_637019151443800234.jpg",
+  width: "24px",
+  height: "24px"
+};
+
+const attributes_Cau_CanTho = {
+ Name: "Cầu Cần Thơ",
+ Description: "Tổng chiều dài 2.750 m"
+};
+
+const pointGraphic_Cau_CanTho  = new Graphic({
+  geometry: point_Cau_CanTho ,
+  symbol: Symbol_CauCanTho,
+  popupTemplate: popupTemplate_point,
+  attributes: attributes_Cau_CanTho ,
+});
+graphicsLayer.add(pointGraphic_Cau_CanTho );
+
+
+//cầu Cao Lãnh
+const point_Cau_CaoLanh = { 
+  
+  type: "point",
+  longitude:105.6515287251318,
+  latitude:    10.410781750741178
+};
+
+const Symbol_CauCL = {
+  type: "picture-marker",
+  url: "data:image/jpeg;base64,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",
+  width: "24px",
+  height: "24px"
+};
+
+const attributes_Cau_CaoLanh = {
+ Name: "Cầu Cao Lãnh",
+ Description: "Tổng chiều dài 2.010 m"
+};
+
+const pointGraphic_Cau_CaoLanh  = new Graphic({
+  geometry: point_Cau_CaoLanh ,
+  symbol: Symbol_CauCL,
+  popupTemplate: popupTemplate_point,
+  attributes: attributes_Cau_CaoLanh ,
+});
+graphicsLayer.add(pointGraphic_Cau_CaoLanh );
+
+
+//cầu Vàm Cống
+const point_Cau_VamCong = { 
+  
+  type: "point",
+  longitude:105.50400098044041, 
+  latitude: 10.316845618738059
+};
+
+const Symbol_CauVC = {
+  type: "picture-marker",
+  url: "https://upload.wikimedia.org/wikipedia/commons/f/f1/C%E1%BA%A7u_V%C3%A0m_C%E1%BB%91ng_trong_chi%E1%BB%81u.png",
+  width: "24px",
+  height: "24px"
+};
+
+const attributes_Cau_VamCong = {
+ Name: "Cầu Vàm Cống",
+ Description: "Tổng chiều dài 2.970 m"
+};
+
+const pointGraphic_Cau_VamCong  = new Graphic({
+  geometry: point_Cau_VamCong ,
+  symbol: Symbol_CauVC,
+  popupTemplate: popupTemplate_point,
+  attributes: attributes_Cau_VamCong ,
+});
+graphicsLayer.add(pointGraphic_Cau_VamCong );
+
+
+//cầu Rạch Miễu
+const point_Cau_RachMieu = { 
+  
+  type: "point",
+  longitude:106.34488867791991,
+  latitude:  10.331591179715945 
+};
+
+const Symbol_CauRM = {
+  type: "picture-marker",
+  url: "https://upload.wikimedia.org/wikipedia/commons/f/fa/R%E1%BA%A1ch_mi%E1%BB%85u_TG-BT.jpg",
+  width: "24px",
+  height: "24px"
+};
+
+const attributes_Cau_RachMieu = {
+ Name: "Cầu Rạch Miễu",
+ Description: "Tổng chiều dài 2.868 m"
+};
+
+const pointGraphic_Cau_RachMieu  = new Graphic({
+  geometry: point_Cau_RachMieu ,
+  symbol: Symbol_CauRM,
+  popupTemplate: popupTemplate_point,
+  attributes: attributes_Cau_RachMieu ,
+});
+graphicsLayer.add(pointGraphic_Cau_RachMieu );
+
+
+//cầu Cái Lớn
+const point_Cau_CaiLon = { 
+  
+  type: "point",
+  longitude:105.12001383637235,
+  latitude:   9.854726800005844
+};
+
+const Symbol_CauCLon = {
+  type: "picture-marker",
+  url: "https://diendandoanhnghiep.vn/media/uploaded/443/2018/09/21/song-cai-lon-copy.JPG",
+  width: "24px",
+  height: "24px"
+};
+
+const attributes_Cau_CaiLon = {
+ Name: "Cầu Cái Lớn",
+ Description: "Tổng chiều dài 681 m"
+};
+
+const pointGraphic_Cau_CaiLon  = new Graphic({
+  geometry: point_Cau_CaiLon ,
+  symbol: Symbol_CauCLon,
+  popupTemplate: popupTemplate_point,
+  attributes: attributes_Cau_CaiLon ,
+});
+graphicsLayer.add(pointGraphic_Cau_CaiLon);
       });
+
+      //TP/TX Rạch Gía
+ const point_RachGia = { 
+    type: "point",
+    longitude: 105.08296745777865, 
+    latitude: 10.009397586012922
+ };
+ 
+ const Symbol_RG = {
+   type: "picture-marker",
+   url: "https://channel.mediacdn.vn/2020/12/16/photo-1-1608086976005179239777.jpg",
+   width: "24px",
+   height: "24px"
+};
+
+ const attributes_RachGia= {
+   Name: "Thành phố Rạch Giá",
+   Description: "- Diện tích: 105,86 km² \n- Thuộc tỉnh: Kiên Giang."
+};
+
+ const pointGraphic_RachGia = new Graphic({
+    geometry: point_RachGia,
+    symbol: Symbol_RG,
+    popupTemplate: popupTemplate_point,
+    attributes: attributes_RachGia
+ });
+ graphicsLayer.add(pointGraphic_RachGia);
+
+
+ //TP/TX Hà Tiên
+ const point_HaTien = { 
+   
+   type: "point",
+   longitude: 104.49062518428534, 
+   latitude:  10.386942583989251
+};
+
+const Symbol_HT = {
+      type: "picture-marker",
+   url: "https://nld.mediacdn.vn/2018/11/3/cong-vien-9-co-tien-15412180718431805661550.jpg",
+   width: "24px",
+   height: "24px"
+};
+
+
+const attributes_HaTien= {
+  Name: "Thành phố Hà Tiên",
+  Description: "- Diện tích: 107,92 km² \n- Thuộc tỉnh: Kiên Giang."
+};
+
+const pointGraphic_HaTien = new Graphic({
+   geometry: point_HaTien,
+   symbol: Symbol_HT,
+   popupTemplate: popupTemplate_point,
+   attributes: attributes_HaTien
+});
+graphicsLayer.add(pointGraphic_HaTien);
+
+ //TP/TX Ngã Bảy
+ const point_NgaBay = { 
+   
+   type: "point",
+   longitude: 105.8224899379154, 
+   latitude:  9.811709804431121
+};
+
+const Symbol_NB = {
+   type: "picture-marker",
+   url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAcwd-aRAbhv74wGg-wc55T8WQgfWOC-UPUA&usqp=CAU",
+   width: "24px",
+   height: "24px"
+};
+
+const attributes_NgaBay= {
+  Name: "Thành Phố Ngã Bảy",
+  Description: "- Diện tích: 78,17 km² \n- Thuộc tỉnh: Hậu Giang."
+};
+
+const pointGraphic_NgaBay = new Graphic({
+   geometry: point_NgaBay,
+   symbol: Symbol_NB,
+   popupTemplate: popupTemplate_point,
+   attributes: attributes_NgaBay
+});
+graphicsLayer.add(pointGraphic_NgaBay);
+
+//TP/TX Châu Đốc
+const point_ChauDoc = { 
+   
+   type: "point",
+   longitude: 105.1191110254459, 
+   latitude:  10.711283288388824
+};
+
+const Symbol_CD = {
+   type: "picture-marker",
+   url: "https://btnmt.1cdn.vn/2015/04/24/images1108815_cong_vien_trung_tam_thanh_pho_chgu___c.jpg",
+   width: "24px",
+   height: "24px"
+};
+
+const attributes_ChauDoc= {
+  Name: "Thành phố Châu Đốc",
+  Description: "- Diện tích: 105,23 km² \n- Thuộc tỉnh: An Giang."
+};
+
+const pointGraphic_ChauDoc = new Graphic({
+   geometry: point_ChauDoc,
+   symbol: Symbol_CD,
+   popupTemplate: popupTemplate_point,
+   attributes: attributes_ChauDoc
+});
+graphicsLayer.add(pointGraphic_ChauDoc);
+
+
+//TP/TX Cao Lãnh
+const point_CaoLanh = { 
+   
+   type: "point",
+   longitude: 105.63336937074757,
+   latitude:   10.45588228782361
+};
+
+const Symbol_CL = {
+   type: "picture-marker",
+   url: "https://www.vtr.org.vn/FileManager/Anh%20web%202018/Thang7/2-90721.jpg",
+   width: "24px",
+   height: "24px"
+};
+
+const attributes_CaoLanh= {
+  Name: "Thành phố Cao Lãnh",
+  Description: "- Diện tích: 107 km² \n- Thuộc tỉnh: Đồng Tháp."
+};
+
+const pointGraphic_CaoLanh = new Graphic({
+   geometry: point_CaoLanh,
+   symbol: Symbol_CL,
+   popupTemplate: popupTemplate_point,
+   attributes: attributes_CaoLanh
+});
+graphicsLayer.add(pointGraphic_CaoLanh);
+
+// Thành Phố Mỹ Tho
+const point_TP_MyTho = { 
+   
+    type: "point",
+    longitude: 106.36650761656955,
+    latitude:   10.35583019761036 
+ };
+ 
+const Symbol_MT = {
+   type: "picture-marker",
+   url: "https://upload.wikimedia.org/wikipedia/commons/d/dc/M%E1%BB%99t_g%C3%B3c_TP.M%E1%BB%B9_Tho_b%C3%AAn_s%C3%B4ng_Ti%E1%BB%81n.jpg",
+   width: "24px",
+   height: "24px"
+};
+
+ const attributes_TP_MyTho= {
+   Name: "Thành phố Mỹ Tho",
+   Description: " - Diện tích: 81,56 km² \n- Thuộc tỉnh: Tiền Giang."
+};
+
+ const pointGraphic_TP_MyTho = new Graphic({
+    geometry: point_TP_MyTho,
+    symbol: Symbol_MT,
+    popupTemplate: popupTemplate_point,
+    attributes: attributes_TP_MyTho
+ });
+ graphicsLayer.add(pointGraphic_TP_MyTho);
+
+ //Thành Phố Long Xuyên
+ const point_TP_LongXuyen = { 
+    type: "point",
+    longitude: 105.44248047163468, 
+    latitude:  10.378034845406221
+ };
+ 
+const Symbol_LX = {
+   type: "picture-marker",
+   url: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Ch%E1%BB%A3_Long_Xuy%C3%AAn_b%C3%AAn_s%C3%B4ng_H%E1%BA%ADu.jpg",
+   width: "24px",
+   height: "24px"
+};
+
+ const attributes_TP_LongXuyen= {
+   Name: "Thành phố Long Xuyên",
+   Description: "- Diện tích: 106,9 km² \n- Thuộc tỉnh: An Giang."
+ };
+ 
+ const pointGraphic_TP_LongXuyen = new Graphic({
+    geometry: point_TP_LongXuyen,
+    symbol: Symbol_LX,
+    popupTemplate: popupTemplate_point,
+    attributes: attributes_TP_LongXuyen
+ });
+ graphicsLayer.add(pointGraphic_TP_LongXuyen);
+ 
+  //Thành Phố Cà Mau
+  const point_TP_CaMau = { 
+    
+    type: "point",
+    longitude: 105.1507750636653, 
+    latitude:  9.176274799945126
+ };
+ 
+const Symbol_CM = {
+   type: "picture-marker",
+   url: "http://4.bp.blogspot.com/-mX2T2IdCHCo/VNp2Ou6IICI/AAAAAAAAAGY/ZeZB4hVxxF4/s1600/Image0005.jpg",
+   width: "24px",
+   height: "24px"
+};
+
+ const attributes_TP_CaMau= {
+   Name: "Thành phố Cà Mau",
+   Description: "- Diện tích: 250,3 km² \n- Thuộc tỉnh: Cà Mau."
+ };
+ 
+ const pointGraphic_TP_CaMau = new Graphic({
+    geometry: point_TP_CaMau,
+    symbol: Symbol_CM,
+    popupTemplate: popupTemplate_point,
+    attributes: attributes_TP_CaMau
+ });
+ graphicsLayer.add(pointGraphic_TP_CaMau);
+ 
+ //Thành Phố Bến Tre
+ const point_TP_BenTre = { 
+    
+    type: "point",
+    longitude: 106.37686730269624, 
+    latitude:  10.236899658382086
+ };
+ 
+const Symbol_BT = {
+   type: "picture-marker",
+   url: "https://bcp.cdnchinhphu.vn/334894974524682240/2022/5/10/tp-ben-tre-16521755134791946394688.jpg",
+   width: "24px",
+   height: "24px"
+};
+
+ const attributes_TP_BenTre= {
+   Name: "Thành phố Bến Tre",
+   Description: "- Diện tích: 65,75 km² \n- Thuộc tỉnh: Bến Tre."
+ };
+ 
+ const pointGraphic_TP_BenTre = new Graphic({
+    geometry: point_TP_BenTre,
+    symbol: Symbol_BT,
+    popupTemplate: popupTemplate_point,
+    attributes: attributes_TP_BenTre
+ });
+ graphicsLayer.add(pointGraphic_TP_BenTre);
+ 
+ 
+ //Thành Phố Hồng Ngự
+ const point_TP_HongNgu = { 
+    
+    type: "point",
+    longitude:105.42671454803035, 
+    latitude: 10.824156180023234
+ };
+ 
+const Symbol_HN = {
+   type: "picture-marker",
+   url: "https://tphongngu.dongthap.gov.vn/image/journal/article?img_id=3223878&t=1663429140900",
+   width: "24px",
+   height: "24px"
+};
+
+ const attributes_TP_HongNgu= {
+   Name: "Thành phố Hồng Ngự",
+   Description: "- Diện tích: 122,2 km² \n- Thuộc tỉnh: Đồng Tháp."
+ };
+ 
+ const pointGraphic_TP_HongNgu = new Graphic({
+    geometry: point_TP_HongNgu,
+    symbol: Symbol_HN,
+    popupTemplate: popupTemplate_point,
+    attributes: attributes_TP_HongNgu
+ });
+ graphicsLayer.add(pointGraphic_TP_HongNgu);
+
+
     });
   </script>
 </head>
